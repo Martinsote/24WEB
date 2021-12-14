@@ -7,17 +7,16 @@
       $userEmail = $_POST['email'];
       $messageSubject = $_POST['subject'];
       $message = $_POST['message'];
-    
-      $to = "najeramartin0@gmail.com"
-      $body = "";
-    
-      $body .="Mensaje de: ".$userName "\r\n";
-      $body .="Correo electrónico: ".$userName "\r\n";
-      $body .="Mensaje: ".$userName "\r\n";
-    
-      mail($to, $messageSubject,  $body);
 
-      echo "Mail Sent. Thank you " . $userName . ", we will contact you shortly.";
+      $header = "Enviado desde la página 24WEB";
+      $mensaje = $message."\nAtentamente: " .$userName;
+    
+      $to = 'najeramartin0@gmail.com';
+     
+      mail($to, $messageSubject, $mensaje, $header);
+
+      echo "<script>alert ('Correo enviado exitosamente' )</script>";
+      echo "<script>setTImeout(\"location.href='index.html'\",1000)</script>";
     } 
   }
 
