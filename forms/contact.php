@@ -1,8 +1,6 @@
 <?php
 
-  if(isset($_POST['email']) && $_POST['email']!='' ){
 
-    if(isset($_POST['submit'])){
       $userName = $_POST['name'];
       $userEmail = $_POST['email'];
       $messageSubject = $_POST['subject'];
@@ -17,8 +15,8 @@
 
       echo "<script>alert ('Correo enviado exitosamente' )</script>";
       echo "<script>setTImeout(\"location.href='index.html'\",1000)</script>";
-    } 
-  }
+    
+
 
     
 
