@@ -7,7 +7,7 @@
       $message = $_POST['message'];
 
       $header = "Enviado desde la página 24WEB";
-      $mensaje = $message."\nAtentamente: " .$userName;
+      $mensaje = $message."\nAtentamente: " .$userName "\nCorreo: ".$userEmail;
     
       $to = 'najeramartin0@gmail.com';
      
