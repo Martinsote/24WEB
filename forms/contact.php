@@ -14,8 +14,10 @@
       mail($to, $messageSubject, $mensaje, $header);
 
       echo "<script>alert ('Correo enviado exitosamente' )</script>";
-      echo "<script>setTImeout(\"location.href='index.html'\")</script>";
-    
+
+      header("Location: <a href= /"index.html"");
+
+      
 
 
     
