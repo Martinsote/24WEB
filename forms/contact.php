@@ -15,9 +15,9 @@
 
       echo "<script>alert ('Correo enviado exitosamente' )</script>";
 
-      header("Location: <a href= /"index.html"");
-
       
+      echo "<script>setTImeout(\"location.href='index.html'\")</script>";
+    
 
 
     
