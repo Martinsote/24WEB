@@ -1,24 +1,25 @@
 <?php
 
+  if(isset($_POST['email']) && $_POST['email']!='' ){
 
+    if(isset($_POST['submit'])){
       $userName = $_POST['name'];
       $userEmail = $_POST['email'];
       $messageSubject = $_POST['subject'];
       $message = $_POST['message'];
-
-      $header = "Enviado desde la página 24WEB";
-      $mensaje = $message."\nAtentamente: " .$userName;
     
-      $to = 'najeramartin0@gmail.com';
-     
-      mail($to, $messageSubject, $mensaje, $header);
-
-      echo "<script>alert ('Correo enviado exitosamente' )</script>";
-
-      
-      echo "<script>setTImeout(\"location.href='index.html'\")</script>";
+      $to = "najeramartin0@gmail.com"
+      $body = "";
     
+      $body .="Mensaje de: ".$userName "\r\n";
+      $body .="Correo electrónico: ".$userName "\r\n";
+      $body .="Mensaje: ".$userName "\r\n";
+    
+      mail($to, $messageSubject,  $body);
 
+      echo "Mail Sent. Thank you " . $userName . ", we will contact you shortly.";
+    } 
+  }
 
     
 
