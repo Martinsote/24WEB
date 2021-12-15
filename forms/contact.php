@@ -7,14 +7,14 @@
       $message = $_POST['message'];
 
       $header = "Enviado desde la página 24WEB";
-      $mensaje = $message."\nAtentamente: " .$userName "\nCorreo: ".$userEmail;
-    
+      $mensaje = $message."\nCorreo :".$userEmail;
+      $mensaje = $message."\nAtentamente: ".$userName;
       $to = 'najeramartin0@gmail.com';
      
       mail($to, $messageSubject, $mensaje, $header);
 
       echo "<script>alert ('Correo enviado exitosamente' )</script>";
-      header('Location:index.html')
+      header('Location:../index.html')
     
 
 
